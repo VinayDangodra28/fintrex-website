@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Check, Sparkles } from 'lucide-react';
 import { PRICING_PLANS } from '../constants';
 import { FadeIn, WaitlistInput } from '../components/ui/Motion';
@@ -8,6 +9,46 @@ const Pricing = () => {
 
   return (
     <div className="pt-24 pb-16 md:pt-32 md:pb-20 bg-black min-h-screen text-white" id="pricing">
+      <Helmet>
+        <title>Pricing | Fintrex AI Accounting - Affordable Plans with Fin AI Assistant</title>
+        <meta name="description" content="Transparent pricing for Fintrex AI accounting automation with Fin assistant. From ₹1,599/month for individual CAs to enterprise solutions. Lock in early access rates forever. No hidden fees. Scale as you grow with powerful AI features." />
+        <meta name="keywords" content="Fintrex pricing, AI accounting software cost, CA software pricing India, accounting automation pricing, Fin AI assistant cost, GST software pricing, early access pricing, accounting software plans" />
+        <link rel="canonical" href="https://fintrex.ai/pricing" />
+        
+        {/* Pricing Page Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Fintrex Pricing Plans",
+            "description": "Affordable AI accounting automation plans with Fin AI assistant",
+            "url": "https://fintrex.ai/pricing"
+          })}
+        </script>
+        
+        {/* Product Offers Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(PRICING_PLANS.map((plan, index) => ({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": `Fintrex ${plan.name} Plan`,
+            "description": plan.idealFor,
+            "price": annual ? plan.priceAnnual : plan.priceMonth,
+            "priceCurrency": "INR",
+            "priceValidUntil": "2025-12-31",
+            "availability": "https://schema.org/PreOrder",
+            "seller": {
+              "@type": "Organization",
+              "name": "Fintrex AI"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": `Fintrex ${plan.name} - AI Accounting Automation`,
+              "description": plan.features.join(", ")
+            }
+          })))}
+        </script>
+      </Helmet>
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <div className="inline-block mb-4 px-3 py-1 bg-brand/10 border border-brand/30 rounded-full text-brand text-xs font-bold uppercase tracking-wide">

@@ -1,7 +1,7 @@
 {
-  "name": "Fintrex - AI Accounting Automation",
+  "name": "Fintrex - AI Accounting Automation with Fin Assistant",
   "short_name": "Fintrex",
-  "description": "Automate accounting workflows with AI-powered invoice extraction, GST filing, and real-time financial reporting. Built for Chartered Accountants in India.",
+  "description": "Meet Fin, your 24/7 AI accounting assistant. Automate invoice extraction, GST filing, and financial reporting with 99.9% accuracy. Built for Chartered Accountants in India.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
@@ -9,19 +9,88 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/fintrex-icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fintrex-icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fintrex-icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fintrex-icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fintrex-icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fintrex-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/fintrex-icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fintrex-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "categories": ["finance", "business", "productivity"],
+  "categories": ["finance", "business", "productivity", "utilities"],
   "lang": "en-IN",
-  "dir": "ltr"
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/screenshots/fintrex-dashboard.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Fintrex Dashboard with Fin AI"
+    },
+    {
+      "src": "/screenshots/fintrex-invoice-extraction.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "AI Invoice Extraction"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Chat with Fin",
+      "short_name": "Fin AI",
+      "description": "Start conversation with Fin AI assistant",
+      "url": "/chat",
+      "icons": [{ "src": "/fintrex-icon-96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Upload Invoice",
+      "short_name": "Upload",
+      "description": "Quick invoice upload",
+      "url": "/upload",
+      "icons": [{ "src": "/fintrex-icon-96.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
 }

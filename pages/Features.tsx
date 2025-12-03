@@ -317,8 +317,100 @@ const Features = () => {
   return (
     <div className="bg-black text-white min-h-screen overflow-x-hidden font-body">
       <Helmet>
-        <title>Features | Fintrex AI Accounting Automation</title>
-        <meta name="description" content="Discover Fintrex features: WhatsApp integration, AI invoice extraction, automated vendor management, and one-click financial reports. Built for modern CA practices." />
+        <title>Features | Fintrex AI Accounting Automation - Fin's Capabilities</title>
+        <meta name="description" content="Discover how Fin, our AI assistant, powers Fintrex features: WhatsApp integration, 99.9% accurate AI invoice extraction, automated vendor management, and one-click financial reports. Built for modern CA practices with cutting-edge AI technology." />
+        <meta name="keywords" content="Fin AI features, AI invoice extraction, WhatsApp accounting integration, OCR invoice scanning, automated vendor management, financial report automation, GST filing automation, Tally integration features, CA software features India" />
+        <link rel="canonical" href="https://fintrex.ai/features" />
+        
+        {/* Features Page Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Fintrex AI Features",
+            "description": "Comprehensive list of Fin AI assistant capabilities and Fintrex platform features",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "WhatsApp-Native Onboarding",
+                "description": "Zero friction client onboarding through WhatsApp with automated document collection",
+                "image": "https://fintrex.ai/features/whatsapp-integration.png"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Smart Document Extraction with Fin AI",
+                "description": "99.9% accurate AI-powered invoice and document extraction using advanced OCR",
+                "image": "https://fintrex.ai/features/ai-extraction.png"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Automated Vendor Master",
+                "description": "Intelligent vendor database with fuzzy matching and global repository",
+                "image": "https://fintrex.ai/features/vendor-management.png"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "One-Click Financial Reports",
+                "description": "Instant Balance Sheets, P&L, and Cash Flow with auto-depreciation",
+                "image": "https://fintrex.ai/features/financial-reports.png"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Automated GST Filing",
+                "description": "One-click GSTR filing with compliance validation",
+                "image": "https://fintrex.ai/features/gst-filing.png"
+              }
+            ]
+          })}
+        </script>
+        
+        {/* HowTo Schema for Workflow */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Automate Accounting with Fintrex and Fin AI",
+            "description": "Step-by-step guide to automating your accounting workflow",
+            "image": "https://fintrex.ai/workflow-guide.png",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Connect",
+                "text": "Add clients via WhatsApp to your Fintrex account"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Capture",
+                "text": "Clients snap photos or send PDFs of invoices via WhatsApp"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Process",
+                "text": "Fin AI extracts and validates all data with 99.9% accuracy"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Review",
+                "text": "Quick side-by-side verification in dashboard"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 5,
+                "name": "File",
+                "text": "One-click GSTR filing with automated compliance"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       
       {/* Hero Section */}

@@ -1,27 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Home Page - Highest Priority -->
   <url>
     <loc>https://fintrex.ai/</loc>
-    <lastmod>2025-11-28</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://fintrex.ai/fintrex-logo.png</image:loc>
+      <image:title>Fintrex Logo</image:title>
+      <image:caption>Fintrex AI Accounting Automation Platform</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fintrex.ai/fin-ai-assistant.png</image:loc>
+      <image:title>Fin AI Assistant</image:title>
+      <image:caption>Meet Fin - Your 24/7 AI Accounting Assistant</image:caption>
+    </image:image>
   </url>
+
+  <!-- Features Page -->
   <url>
-    <loc>https://fintrex.ai/#home</loc>
-    <lastmod>2025-11-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://fintrex.ai/#features</loc>
-    <lastmod>2025-11-28</lastmod>
+    <loc>https://fintrex.ai/features</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fintrex.ai/features/whatsapp-integration.png</image:loc>
+      <image:title>WhatsApp Integration</image:title>
+      <image:caption>WhatsApp-native document collection with Fin AI</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fintrex.ai/features/ai-extraction.png</image:loc>
+      <image:title>AI Invoice Extraction</image:title>
+      <image:caption>99.9% accurate AI-powered invoice extraction</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fintrex.ai/features/vendor-management.png</image:loc>
+      <image:title>Automated Vendor Management</image:title>
+      <image:caption>Intelligent vendor database with fuzzy matching</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fintrex.ai/features/financial-reports.png</image:loc>
+      <image:title>One-Click Financial Reports</image:title>
+      <image:caption>Instant balance sheets and P&L reports</image:caption>
+    </image:image>
   </url>
+
+  <!-- Pricing Page -->
   <url>
-    <loc>https://fintrex.ai/#faq</loc>
-    <lastmod>2025-11-28</lastmod>
+    <loc>https://fintrex.ai/pricing</loc>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://fintrex.ai/fintrex-logo.png</image:loc>
+      <image:title>Fintrex Pricing Plans</image:title>
+      <image:caption>Affordable AI accounting automation plans</image:caption>
+    </image:image>
   </url>
+
+  <!-- FAQ Page -->
+  <url>
+    <loc>https://fintrex.ai/faq</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://fintrex.ai/fintrex-logo.png</image:loc>
+      <image:title>Fintrex FAQ</image:title>
+      <image:caption>Frequently asked questions about Fintrex and Fin AI</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog/Resources (if added later) -->
+  <url>
+    <loc>https://fintrex.ai/blog</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- About Page (if added later) -->
+  <url>
+    <loc>https://fintrex.ai/about</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Contact Page (if added later) -->
+  <url>
+    <loc>https://fintrex.ai/contact</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

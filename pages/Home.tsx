@@ -26,8 +26,72 @@ const Home: React.FC = () => {
   return (
     <div className="bg-black text-white overflow-hidden">
       <Helmet>
-        <title>Fintrex | AI Accounting Automation for Indian CAs</title>
-        <meta name="description" content="Automate 70% of your accounting work with AI. Zero manual data entry, instant GST filing, and 99.9% accuracy. Join 150+ CAs who've transformed their practice." />
+        <title>Fintrex | AI Accounting Automation for Indian CAs - Meet Fin Your AI Assistant</title>
+        <meta name="description" content="Meet Fin, your 24/7 AI accounting assistant. Automate 70% of your accounting work with AI-powered invoice extraction, instant GST filing, and 99.9% accuracy. Join 150+ CAs who've transformed their practice. Zero manual data entry." />
+        <meta name="keywords" content="Fin AI assistant, AI accounting automation, chartered accountant software India, GST filing automation, invoice extraction AI, WhatsApp accounting, Tally integration, CA practice management, automated bookkeeping India, financial reporting automation" />
+        <link rel="canonical" href="https://fintrex.ai" />
+        
+        {/* Home Page Specific Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Fintrex - AI Accounting Automation Platform",
+            "description": "Meet Fin, your AI accounting assistant that never sleeps. Automate invoice processing, GST filing, and financial reporting with 99.9% accuracy.",
+            "url": "https://fintrex.ai",
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://fintrex.ai/fin-hero-image.png"
+            },
+            "mainEntity": {
+              "@type": "SoftwareApplication",
+              "name": "Fintrex",
+              "offers": {
+                "@type": "AggregateOffer",
+                "lowPrice": "1599",
+                "highPrice": "7999",
+                "priceCurrency": "INR",
+                "offerCount": "3"
+              }
+            },
+            "about": {
+              "@type": "Service",
+              "serviceType": "AI Accounting Automation",
+              "provider": {
+                "@type": "Organization",
+                "name": "Fintrex AI"
+              },
+              "areaServed": "IN",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Accounting Automation Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "AI Invoice Extraction"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Automated GST Filing"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Real-time Financial Reporting"
+                    }
+                  }
+                ]
+              }
+            }
+          })}
+        </script>
       </Helmet>
       <Hero />
       

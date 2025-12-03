@@ -7,8 +7,41 @@ const FAQ = () => {
   return (
     <div className="pt-32 pb-20 bg-black min-h-screen text-white">
       <Helmet>
-        <title>FAQ | Fintrex - Your Questions Answered</title>
-        <meta name="description" content="Get answers to common questions about Fintrex AI accounting automation. Learn about pricing, security, integrations, and how we help CA firms scale." />
+        <title>FAQ | Fintrex - Your Questions About Fin AI Assistant Answered</title>
+        <meta name="description" content="Get answers to common questions about Fintrex AI accounting automation and Fin, our AI assistant. Learn about pricing, security, integrations, AI accuracy, and how we help CA firms scale with 99.9% accuracy." />
+        <meta name="keywords" content="Fintrex FAQ, Fin AI assistant questions, accounting automation questions, CA software help, AI invoice accuracy, pricing, security, Tally integration, WhatsApp accounting setup" />
+        <link rel="canonical" href="https://fintrex.ai/faq" />
+        
+        {/* FAQ Page Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": FAQS_FULL.flatMap(category => 
+              category.questions.map(q => ({
+                "@type": "Question",
+                "name": q.q,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": q.a
+                }
+              }))
+            )
+          })}
+        </script>
+        
+        {/* Additional Question Schema about Fin AI */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Question",
+            "name": "What is Fin and how does it help with accounting automation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fin is Fintrex's AI accounting assistant that works 24/7 to automate invoice processing, data extraction, and compliance validation. Fin achieves 99.9% accuracy in document extraction and can process invoices, validate GST data, and prepare financial reports automatically, allowing CAs to focus on high-value advisory work."
+            }
+          })}
+        </script>
       </Helmet>
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">

@@ -1,9 +1,64 @@
-# https://www.robotstxt.org/robotstxt.html
+# Fintrex AI Accounting Platform - Robots.txt
+# https://fintrex.ai/robots.txt
+
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
-# Sitemap
+# Crawl Delay for polite crawling
+Crawl-delay: 1
+
+# Sitemaps
 Sitemap: https://fintrex.ai/sitemap.xml
 
-# Disallow admin or private areas (if any in future)
-# Disallow: /admin
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Disallow API endpoints if any
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow images for SEO
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.gif$
+
+# Allow CSS and JS for rendering
+Allow: /*.css$
+Allow: /*.js$
+
+# Important pages for crawling
+# Home
+Allow: /
+# Features  
+Allow: /features
+# Pricing
+Allow: /pricing
+# FAQ
+Allow: /faq
