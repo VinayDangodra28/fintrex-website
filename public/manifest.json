@@ -1,0 +1,27 @@
+{
+  "name": "Fintrex - AI Accounting Automation",
+  "short_name": "Fintrex",
+  "description": "Automate accounting workflows with AI-powered invoice extraction, GST filing, and real-time financial reporting. Built for Chartered Accountants in India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00ff88",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "business", "productivity"],
+  "lang": "en-IN",
+  "dir": "ltr"
+}
