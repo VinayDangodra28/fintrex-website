@@ -16,7 +16,7 @@ const SingleRing = ({
   const ref = useRef<any>();
   
   // Random offset so each ring accelerates/decelerates independently
-  const speedOffset = useMemo(() => Math.random() * 100, []);
+  const speedOffset = useMemo(() => Math.random() * 150, []);
 
   const [positions, colors] = useMemo(() => {
     const positions = new Float32Array(count * 3);

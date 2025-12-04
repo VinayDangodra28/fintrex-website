@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
+import FinStory from '../components/FinStory';
 import { FadeIn, SpotlightCard, ScaleIn, WaitlistInput } from '../components/ui/Motion';
 import { AppLogo, AgentFin } from '../components/ui/BrandAssets';
 import { 
@@ -24,7 +25,7 @@ import { TESTIMONIALS, FAQS_SHORT } from '../constants';
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-black text-white overflow-hidden">
+    <div className="bg-black text-white overflow-x-hidden">
       <Helmet>
         <title>Fintrex | AI Accounting Automation for Indian CAs - Meet Fin Your AI Assistant</title>
         <meta name="description" content="Meet Fin, your 24/7 AI accounting assistant. Automate 70% of your accounting work with AI-powered invoice extraction, instant GST filing, and 99.9% accuracy. Join 150+ CAs who've transformed their practice. Zero manual data entry." />
@@ -171,24 +172,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* Meet Fin Section */}
-      <section className="py-16 md:py-20 bg-white/5 border-y border-white/10 relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-white/5 border-y border-white/10 relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brand/5 to-transparent pointer-events-none" />
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
-             <div className="lg:w-1/2 relative h-[300px] md:h-[400px] flex items-center justify-center">
-              {/* Agent Fin Animation */}
-              <motion.div 
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="w-full max-w-[280px] md:max-w-[400px] relative z-10"
-              >
-                 <AgentFin className="w-full h-full drop-shadow-[0_0_50px_rgba(0,255,136,0.2)]" />
-              </motion.div>
-              {/* Background Glow */}
-              <div className="absolute inset-0 bg-brand/10 blur-[80px] rounded-full z-0" />
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-8 md:gap-12">
+             <div className="w-full lg:w-1/2 relative">
+                <FinStory />
             </div>
             
-            <div className="lg:w-1/2">
+            <div className="w-full lg:w-1/2">
               <FadeIn>
                 <div className="inline-block px-3 py-1 bg-brand/10 border border-brand/20 rounded-full text-brand text-xs font-bold mb-4">
                   MEET YOUR NEW PARTNER
@@ -205,7 +197,7 @@ const Home: React.FC = () => {
                     { name: "Precision Vision Module", role: "Sees Every Detail", score: "Flawless" },
                     { name: "Secure Local Processing", role: "Ironclad Privacy", score: "Encrypted" }
                   ].map((tech, idx) => (
-                    <div key={idx} className="flex items-center justify-between p-4 rounded-lg bg-black/50 border border-white/10 backdrop-blur-md">
+                    <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg bg-black/50 border border-white/10 backdrop-blur-md gap-2 sm:gap-0">
                       <div>
                         <h4 className="font-bold text-white">{tech.name}</h4>
                         <p className="text-xs text-gray-500">{tech.role}</p>
@@ -230,6 +222,7 @@ const Home: React.FC = () => {
             className="w-full h-full object-cover opacity-5"
           />
         </div>
+
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
            <FadeIn className="mb-12 md:mb-16 text-center">
             <span className="text-brand font-bold tracking-wider uppercase text-sm">Our Services</span>
@@ -411,6 +404,7 @@ const Home: React.FC = () => {
            />
            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
         </div>
+
         <div className="absolute inset-0 bg-gradient-to-t from-brand/5 to-transparent z-0" />
         <div className="container mx-auto px-4 max-w-7xl relative z-10 text-center">
            <h2 className="text-4xl md:text-7xl font-heading font-bold mb-6 text-white">

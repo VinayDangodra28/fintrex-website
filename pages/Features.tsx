@@ -17,6 +17,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { FadeIn, WaitlistInput } from '../components/ui/Motion';
+import BrandRings from '../components/BrandRings';
 
 // --- Animated Visual Components for each Feature ---
 
@@ -418,6 +419,11 @@ const Features = () => {
          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand/10 blur-[120px] rounded-full pointer-events-none" />
          
+         {/* Brand Rings - Central Visual Element */}
+         <div className="absolute inset-0 opacity-40 pointer-events-none z-0">
+             <BrandRings scale={1.8} />
+         </div>
+
          <div className="container mx-auto px-4 max-w-7xl relative z-10 text-center">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
