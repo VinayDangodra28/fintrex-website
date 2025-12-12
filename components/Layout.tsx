@@ -154,12 +154,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </p>
               <div className="flex gap-4">
                 {[
-                  { icon: <Linkedin size={20} />, href: "#" },
-                  { icon: <Twitter size={20} />, href: "#" },
+                  { icon: <Linkedin size={20} />, href: "https://linkedin.com/company/fintrex" },
+                  { icon: <Twitter size={20} />, href: "https://twitter.com/fintrexai" },
                   { icon: <Youtube size={20} />, href: "#" },
                   { icon: <Instagram size={20} />, href: "#" }
                 ].map((social, i) => (
-                  <a key={i} href={social.href} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-black transition-all">
+                  <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-black transition-all">
                     {social.icon}
                   </a>
                 ))}
@@ -170,10 +170,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div>
               <h4 className="font-heading font-bold text-white mb-6">Case Studies</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Scaling to 100 Clients</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">GST Filing Automation</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">CA Rajesh's Success</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Zero-Touch Tax Season</a></li>
+                <li><Link to="/case-studies/scaling-to-100-clients-solo-ca" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Scaling to 100 Clients</Link></li>
+                <li><Link to="/case-studies/gst-filing-automation-success-story" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">GST Filing Automation</Link></li>
+                <li><Link to="/case-studies/ca-firm-growth-without-hiring" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">CA Firm Growth</Link></li>
+                <li><Link to="/case-studies/zero-touch-tax-season-automation" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Zero-Touch Tax Season</Link></li>
               </ul>
             </div>
 
@@ -181,10 +181,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div>
               <h4 className="font-heading font-bold text-white mb-6">Resources</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Blog: AI vs Manual Entry</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Future of CA Practice</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Roadmap</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Community</a></li>
+                <li><Link to="/blog/ai-vs-manual-data-entry-accounting" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">AI vs Manual Entry</Link></li>
+                <li><Link to="/blog/future-of-ca-practice-india-2025" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Future of CA Practice</Link></li>
+                <li><Link to="/blog" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">All Blog Posts</Link></li>
+                <li><Link to="/case-studies" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">All Case Studies</Link></li>
               </ul>
             </div>
 
@@ -192,11 +192,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div>
               <h4 className="font-heading font-bold text-white mb-6">Company</h4>
               <ul className="space-y-4 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">About Us</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Careers</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Contact</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Terms of Service</a></li>
+                <li><Link to="/about" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">About Us</Link></li>
+                <li><Link to="/features" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Features</Link></li>
+                <li><Link to="/pricing" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Pricing</Link></li>
+                <li><Link to="/privacy-policy" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-brand hover:underline hover:underline-offset-4 transition-all duration-300">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
