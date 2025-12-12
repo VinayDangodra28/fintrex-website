@@ -12,7 +12,7 @@ import ParticleSphere from './ParticleSphere';
 
 const Hero = () => {
   const [wordIndex, setWordIndex] = useState(0);
-  const words = ["Automate", "Simplify", "Optimize", "Secure"];
+  const words = ["Automated", "Simpliflied", "Optimized", "Secure"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -46,7 +46,7 @@ const Hero = () => {
                   </motion.div>
                   
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 text-white leading-tight tracking-tight">
-                    Empower your Firm to <br className="hidden md:block" />
+                    The Future of <br className="hidden md:block" />
                     <span className="inline-flex flex-wrap gap-x-3">
                       <span className="text-brand glow-text relative inline-block min-w-[180px] md:min-w-[240px]">
                         <AnimatePresence mode="wait">
@@ -62,7 +62,7 @@ const Hero = () => {
                         </AnimatePresence>
                         <span className="invisible">Automate</span>
                       </span>
-                      <span>Your Invoices</span>
+                      <span>CA-MSME Finance</span>
                     </span>
                   </h1>
 
@@ -72,7 +72,7 @@ const Hero = () => {
                     transition={{ delay: 0.6 }}
                     className="text-gray-400 text-base md:text-lg mb-0 max-w-lg leading-relaxed"
                   >
-                    FinTrex empowers CA firms to handle invoices smarter and faster. Free your team to focus on advisory work while routine tasks run on autopilot.
+                    Fintrex.ai is building the complete automation ecosystem for CA firms and MSMEs. Connect financial operations with CA workflows for smarter decisions and real-time clarity.
                   </motion.p>
               </div>
 

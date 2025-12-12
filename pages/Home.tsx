@@ -102,9 +102,9 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
               { label: "Data Accuracy", value: "99.9%" },
-              { label: "Faster Processing", value: "70%" },
-              { label: "Invoices Automated", value: "5000+" },
-              { label: "Secure Uptime", value: "24/7" }
+              { label: "Manual Work Reduced", value: "80%" },
+              { label: "Documents Processed", value: "5000+" },
+              { label: "Real-time Visibility", value: "24/7" }
             ].map((stat, i) => (
               <div key={i} className="py-6 md:py-8 text-center">
                 <div className="text-2xl md:text-4xl font-heading font-bold text-white mb-1">{stat.value}</div>
@@ -183,19 +183,19 @@ const Home: React.FC = () => {
             <div className="w-full lg:w-1/2">
               <FadeIn>
                 <div className="inline-block px-3 py-1 bg-brand/10 border border-brand/20 rounded-full text-brand text-xs font-bold mb-4">
-                  MEET YOUR NEW PARTNER
+                  THE OPERATING SYSTEM
                 </div>
-                <h2 className="text-3xl md:text-5xl font-heading mb-6">Hello, I'm <span className="text-brand">Fin.</span></h2>
+                <h2 className="text-3xl md:text-5xl font-heading mb-6">The Foundation of <span className="text-brand">Modern Finance.</span></h2>
                 <p className="text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
-                  I'm the silicon accountant that never sleeps. I process invoices, validate data, and ensure compliance 24/7. While I handle the routine work, you can focus on high-value advisory for your clients.
+                  Fintrex.ai is not just automation. It’s the foundation of the modern financial operating system, making CA firms indispensable partners to MSMEs.
                 </p>
                 
                 <div className="space-y-4">
                   {[
-                    { name: "Cognitive Context Engine", role: "Thinks Like a Human", score: "Superhuman" },
-                    { name: "Rapid Extraction Core", role: "Works at Light Speed", score: "Instant" },
-                    { name: "Precision Vision Module", role: "Sees Every Detail", score: "Flawless" },
-                    { name: "Secure Local Processing", role: "Ironclad Privacy", score: "Encrypted" }
+                    { name: "Unified Client Workspaces", role: "No lost documents", score: "Organized" },
+                    { name: "Automated Accounting", role: "Ledger entries auto-posted", score: "Accurate" },
+                    { name: "Advanced Reporting", role: "Real-time dashboards", score: "Insightful" },
+                    { name: "Compliance Coordination", role: "Proactive alerts", score: "Effortless" }
                   ].map((tech, idx) => (
                     <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg bg-black/50 border border-white/10 backdrop-blur-md gap-2 sm:gap-0">
                       <div>
@@ -235,41 +235,36 @@ const Home: React.FC = () => {
             {[
               {
                 icon: <LayoutDashboard className="w-6 h-6 text-brand" />,
-                title: "Branded Client Portal",
-                desc: "A fully white-labeled, professionally branded portal for seamless invoice management. Showcase your firm's identity on web and mobile."
+                title: "Unified Client Workspaces",
+                desc: "Bills, invoices, receipts, and statements flow seamlessly via WhatsApp or direct upload. Documents are automatically organized, cleaned, and classified."
               },
               {
                 icon: <Zap className="w-6 h-6 text-brand" />,
-                title: "Intelligent Invoice Capture",
-                desc: "Harness advanced AI-driven OCR to extract details with unmatched accuracy. Eliminates manual data entry entirely."
+                title: "Automated Accounting",
+                desc: "Ledger entries suggested or auto-posted with seamless Tally sync. Anomalies flagged instantly. Final accounts generated automatically."
               },
               {
                 icon: <Cpu className="w-6 h-6 text-brand" />,
-                title: "Automated Data Processing",
-                desc: "Automatically validate, organize, and format invoice data. Integrates with Tally and other leading accounting platforms."
-              },
-              {
-                icon: <Layers className="w-6 h-6 text-brand" />,
-                title: "GL Code Mapping",
-                desc: "Simplify accounting with precise General Ledger code mapping. Ensures every entry is correctly categorized."
-              },
-              {
-                icon: <UploadCloud className="w-6 h-6 text-brand" />,
-                title: "Multi-Channel Upload",
-                desc: "Effortless submission. Clients can scan, upload, or submit invoices via WhatsApp integration from anywhere."
-              },
-              {
-                icon: <Timer className="w-6 h-6 text-brand" />,
-                title: "Real-Time Data Finalization",
-                desc: "Receive consolidated, verified financial data in real time. Minimize manual intervention and accelerate filing."
+                title: "Advanced Reporting",
+                desc: "Real-time dashboards showing revenue, expenses, and cash flow. Forecasting and budget tracking for CFO-level visibility."
               },
               {
                 icon: <ShieldCheck className="w-6 h-6 text-brand" />,
-                title: "Secure Data Management",
-                desc: "Enterprise-grade encryption and SOC 2 compliance. We prioritize data security and your peace of mind."
+                title: "Compliance Coordination",
+                desc: "GST/TDS data readiness, missing document detection, and ITC tracking. Compliance becomes effortless and proactive."
+              },
+              {
+                icon: <MessageCircle className="w-6 h-6 text-brand" />,
+                title: "Collaboration Layer",
+                desc: "A unified communication framework for queries, approvals, and document requests. Full traceability and no miscommunication."
+              },
+              {
+                icon: <Globe className="w-6 h-6 text-brand" />,
+                title: "Multi-Firm Management",
+                desc: "View the health of all clients in one dashboard. Track pending tasks, assign roles, and monitor real-time progress."
               }
             ].map((feature, idx) => (
-              <SpotlightCard key={idx} className={`h-full ${idx === 6 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''}`}>
+              <SpotlightCard key={idx} className="h-full">
                 <div className="p-8 h-full flex flex-col">
                   <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center mb-6 border border-brand/20">
                     {feature.icon}
@@ -297,10 +292,10 @@ const Home: React.FC = () => {
           <h2 className="text-center text-3xl font-heading mb-12 md:mb-16">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Capture", desc: "Upload or scan invoices instantly via App or WhatsApp." },
-              { step: "02", title: "Process", desc: "AI extracts, validates, and categorizes data." },
-              { step: "03", title: "Finalize", desc: "Data is mapped to GL codes and ready for Tally." },
-              { step: "04", title: "Deliver", desc: "Clients access branded reports on your portal." }
+              { step: "01", title: "Unified Intake", desc: "Bills, invoices, and receipts flow seamlessly from any source." },
+              { step: "02", title: "Auto-Accounting", desc: "Raw data transforms into clean, structured financials instantly." },
+              { step: "03", title: "Deep Insights", desc: "Real-time dashboards for revenue, expenses, and cash flow." },
+              { step: "04", title: "Proactive Compliance", desc: "Effortless GST/TDS readiness with automated alerts." }
             ].map((item, i) => (
               <div key={i} className="relative p-6 border border-white/10 rounded-2xl bg-black hover:border-brand/50 transition-colors group">
                  <div className="text-5xl font-heading font-bold text-white/5 absolute top-4 right-4 group-hover:text-brand/10 transition-colors">{item.step}</div>
@@ -309,6 +304,25 @@ const Home: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-20 md:py-32 bg-black relative overflow-hidden border-y border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand/10 via-black to-black" />
+        <div className="container mx-auto px-4 max-w-4xl relative z-10 text-center">
+          <FadeIn>
+            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-brand/30 bg-brand/5 text-brand text-sm font-medium tracking-wide uppercase mb-8">
+              Our Vision
+            </div>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-8 leading-tight">
+              The Operating System for <br />
+              <span className="text-brand">Modern Finance</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light">
+              "Fintrex.ai is building the future of CA–MSME financial collaboration — an intelligent, automated, and scalable ecosystem that transforms compliance into strategy and data into actionable insight."
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -331,31 +345,31 @@ const Home: React.FC = () => {
             {/* Content Side */}
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 text-black">
-                Why FinTrex?
+                Why Fintrex.ai Stands Apart
               </h2>
               <p className="text-lg md:text-xl font-medium leading-relaxed mb-10 text-neutral-700">
-                FinTrex isn’t just another accounting tool—it’s an <span className="text-brand-dark bg-brand-light px-2 rounded">industry-layer</span> that changes how CA firms operate.
+                Fintrex.ai is building the future of CA–MSME financial collaboration — an <span className="text-brand-dark bg-brand-light px-2 rounded">intelligent ecosystem</span> that transforms compliance into strategy.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-x-6 gap-y-8">
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
-                    <p className="font-medium text-neutral-800">Moves accounting from compliance-only to compliance + real-time insights.</p>
+                    <p className="font-medium text-neutral-800">Cuts 60–80% of manual accounting work.</p>
                   </div>
                   <div className="flex gap-4">
                     <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
-                    <p className="font-medium text-neutral-800">Reduces dependency on manpower, solving staffing and attrition challenges.</p>
+                    <p className="font-medium text-neutral-800">Eliminates follow-up chaos and miscommunication.</p>
                   </div>
                 </div>
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
-                    <p className="font-medium text-neutral-800">Provides a sticky SaaS experience, keeping clients engaged and loyal.</p>
+                    <p className="font-medium text-neutral-800">Enables high-quality advisory and faster reporting.</p>
                   </div>
                   <div className="flex gap-4">
                     <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
-                    <p className="font-medium text-neutral-800">Massive market potential built for mandatory GST compliance.</p>
+                    <p className="font-medium text-neutral-800">Scales CA firms without extra hires.</p>
                   </div>
                 </div>
               </div>
@@ -408,10 +422,10 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-brand/5 to-transparent z-0" />
         <div className="container mx-auto px-4 max-w-7xl relative z-10 text-center">
            <h2 className="text-4xl md:text-7xl font-heading font-bold mb-6 text-white">
-             Join the <span className="text-brand">Waitlist</span>
+             Join the <span className="text-brand">Future of Finance</span>
            </h2>
            <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
-             Be among the first to automate your practice. Early access members get locked-in pricing for life.
+             Transform compliance into strategy and data into actionable insight. Be among the first to experience the operating system for modern finance.
            </p>
            <WaitlistInput />
         </div>
