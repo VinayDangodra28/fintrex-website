@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
@@ -14,8 +14,14 @@ import CaseStudyPage from './pages/CaseStudyPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import SEO from './components/SEO';
+import { initEmailJS } from './lib/emailjs';
 
 const App: React.FC = () => {
+  // Initialize EmailJS on app load
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
   return (
     <HelmetProvider>
       <Router>

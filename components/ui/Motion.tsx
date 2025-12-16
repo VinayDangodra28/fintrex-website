@@ -1,7 +1,8 @@
 
 import React, { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { ArrowRight, Loader2, Sparkles } from 'lucide-react';
+import { ArrowRight, Loader2, Sparkles, AlertCircle } from 'lucide-react';
+import { handleWaitlistSignup } from '../../lib/emailjs';
 
 interface Props {
   children: React.ReactNode;
@@ -166,16 +167,33 @@ export const SpotlightCard: React.FC<{ children: React.ReactNode; className?: st
 
 export const WaitlistInput: React.FC<{ className?: string }> = ({ className = "" }) => {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+    
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setStatus('error');
+      setErrorMessage('Please enter a valid email address');
+      return;
+    }
+    
     setStatus('loading');
-    setTimeout(() => {
+    setErrorMessage("");
+    
+    try {
+      await handleWaitlistSignup(email);
       setStatus('success');
       setEmail("");
-    }, 1500);
+    } catch (error) {
+      console.error('Waitlist signup failed:', error);
+      setStatus('error');
+      setErrorMessage('Something went wrong. Please try again.');
+    }
   };
 
   return (
@@ -188,7 +206,24 @@ export const WaitlistInput: React.FC<{ className?: string }> = ({ className = ""
             className="bg-brand/10 backdrop-blur-xl border border-brand/50 text-brand rounded-full px-6 py-4 flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(0,255,136,0.2)]"
           >
             <Sparkles className="w-5 h-5" />
-            <span className="font-bold">You've secured your spot! Welcome to the future.</span>
+            <span className="font-bold">You've secured your spot! Check your email for confirmation.</span>
+          </motion.div>
+        ) : status === 'error' ? (
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            className="flex flex-col gap-3"
+          >
+            <div className="bg-red-500/10 backdrop-blur-xl border border-red-500/50 text-red-400 rounded-full px-6 py-4 flex items-center justify-center gap-3">
+              <AlertCircle className="w-5 h-5" />
+              <span className="font-medium">{errorMessage}</span>
+            </div>
+            <button 
+              onClick={() => setStatus('idle')}
+              className="text-brand text-sm hover:underline"
+            >
+              Try again
+            </button>
           </motion.div>
         ) : (
           <motion.form 
