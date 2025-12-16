@@ -106,7 +106,12 @@ const Pricing = () => {
                   </ul>
 
                   <button 
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    onClick={() => {
+                      const waitlistForm = document.getElementById('waitlist-form');
+                      if (waitlistForm) {
+                        waitlistForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                      }
+                    }}
                     className={`w-full py-3 rounded-lg font-bold transition-all border ${plan.isPopular ? 'bg-brand text-black border-brand hover:bg-brand-light' : 'bg-transparent text-white border-white/20 hover:border-brand hover:text-brand'}`}
                   >
                     Join Waitlist

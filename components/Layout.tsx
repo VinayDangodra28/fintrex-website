@@ -29,10 +29,20 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   }, [location]);
 
   const scrollToWaitlist = () => {
-    navigate('/');
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const waitlistForm = document.getElementById('waitlist-form');
+        if (waitlistForm) {
+          waitlistForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+    } else {
+      const waitlistForm = document.getElementById('waitlist-form');
+      if (waitlistForm) {
+        waitlistForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
   };
 
   const navLinks = [

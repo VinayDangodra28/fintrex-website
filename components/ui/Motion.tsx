@@ -197,7 +197,7 @@ export const WaitlistInput: React.FC<{ className?: string }> = ({ className = ""
   };
 
   return (
-    <div className={`relative max-w-md w-full mx-auto ${className}`}>
+    <div id="waitlist-form" className={`relative max-w-md w-full mx-auto ${className}`}>
       <AnimatePresence mode='wait'>
         {status === 'success' ? (
           <motion.div 
